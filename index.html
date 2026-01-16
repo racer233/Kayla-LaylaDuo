@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kayla & Layla - Real Waterbury CT Duo. Double the fun for respectful guys. No drama, good vibes only.">
+    <meta property="og:title" content="Kayla & Layla | Real CT Duo">
+    <meta property="og:description" content="Double the heat in Waterbury. Real CT girls for cool guys who know how to play.">
+    <title>Kayla & Layla | Real Waterbury Duo</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-pink: #ff2d55;
+            --neon-red: #ff073a;
+            --dark-bg: #0a0a0a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: #eeeeee;
+            overflow-x: hidden;
+        }
+
+        .font-serif-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .platinum-text {
+            background: linear-gradient(135deg, #e5e4e2 0%, #ffffff 50%, #a6a6a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 2px rgba(255,255,255,0.1));
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        .img-slot {
+            position: relative;
+            background: #111;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 4px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .img-slot:hover {
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 25px rgba(255, 45, 85, 0.4);
+        }
+
+        .img-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .img-slot:hover img {
+            transform: scale(1.08);
+        }
+
+        .img-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .img-slot:hover .img-overlay {
+            opacity: 1;
+        }
+
+        .cta-card {
+            background: linear-gradient(160deg, #141414 0%, #050505 100%);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .neon-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--neon-red);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px var(--neon-red);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title { font-size: 4rem; line-height: 1; }
+            .phone-link { font-size: 2.4rem; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Nav -->
+    <nav class="w-full py-5 px-6 md:px-12 flex justify-between items-center border-b border-white/5 sticky top-0 z-50 bg-black/90 backdrop-blur-sm">
+        <div class="flex items-center space-x-3">
+            <span class="neon-dot"></span>
+            <span class="text-[10px] tracking-[0.5em] uppercase font-bold text-white/70">Waterbury, CT</span>
+        </div>
+        <div class="px-3 py-1 border border-pink-500/30 rounded bg-pink-500/5">
+            <span class="text-[9px] tracking-[0.3em] uppercase text-pink-500 font-extrabold">Real CT Duo</span>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 md:px-8 pb-20">
+        
+        <!-- Hero Section -->
+        <section class="text-center pt-16 pb-12 md:pt-28 md:pb-24">
+            <h1 class="hero-title text-7xl md:text-9xl font-serif-italic platinum-text mb-8">Kayla & Layla</h1>
+            <p class="text-lg md:text-2xl font-light tracking-wide text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                Real CT heat, double the fun. <br class="hidden md:block">
+                For <span class="text-white border-b border-pink-600/50">cool, respectful guys</span> who know how to play.
+            </p>
+        </section>
+
+        <!-- Gallery Grid (Exactly 4 images: Kayla, Layla, Kayla, Layla) -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12">
+            
+            <!-- Kayla 1 -->
+            <div class="img-slot group">
+                <img src="https://i.postimg.cc/hJkkqP33/Kayla.jpg" alt="Kayla" loading="lazy">
+                <div class="img-overlay absolute inset-0 flex items-end p-4">
+                    <span class="text-[10px] tracking-widest uppercase font-bold text-white">Kayla</span>
+                </div>
+            </div>
+
+            <!-- Layla 1 -->
+            <div class="img-slot group">
+                <img src="https://i.postimg.cc/jLg4LwK8/Layla-1.jpg" alt="Layla" loading="lazy">
+                <div class="img-overlay absolute inset-0 flex items-end p-4">
+                    <span class="text-[10px] tracking-widest uppercase font-bold text-white">Layla</span>
+                </div>
+            </div>
+
+            <!-- Kayla 2 -->
+            <div class="img-slot group">
+                <img src="https://i.postimg.cc/cg1jPdtt/Kayla2.jpg" alt="Kayla Alternate" loading="lazy">
+                <div class="img-overlay absolute inset-0 flex items-end p-4">
+                    <span class="text-[10px] tracking-widest uppercase font-bold text-white">Kayla</span>
+                </div>
+            </div>
+
+            <!-- Layla 2 -->
+            <div class="img-slot group">
+                <img src="https://i.postimg.cc/bDYM4qSs/Layla-2.jpg" alt="Layla Alternate" loading="lazy">
+                <div class="img-overlay absolute inset-0 flex items-end p-4">
+                    <span class="text-[10px] tracking-widest uppercase font-bold text-white">Layla</span>
+                </div>
+            </div>
+
+            <!-- Duo Chemistry Banner -->
+            <div class="w-full py-10 md:py-16 bg-gradient-to-r from-transparent via-white/5 to-transparent text-center border-y border-white/5 col-span-2 md:col-span-4 mt-4">
+                <h3 class="text-2xl md:text-4xl font-serif-italic text-white mb-2">The Ultimate Duo</h3>
+                <p class="text-xs tracking-[0.4em] text-pink-500 uppercase font-bold italic">Kayla & Layla Chemistry</p>
+            </div>
+        </section>
+
+        <!-- CTA Card -->
+        <section class="cta-card p-8 md:p-20 rounded-3xl text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl md:text-6xl font-serif-italic text-white mb-6">Ready for some real CT fun?</h2>
+                <p class="text-xs tracking-[0.4em] text-gray-500 uppercase mb-12 italic">Good vibes only, no drama.</p>
+                
+                <a href="tel:2035777211" class="phone-link text-5xl md:text-8xl font-serif-italic platinum-text text-glow inline-block hover:opacity-70 transition-all mb-16">
+                    203.577.7211
+                </a>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left border-t border-white/10 pt-14 max-w-4xl mx-auto">
+                    <div class="space-y-4">
+                        <h4 class="text-pink-500 text-xs tracking-[0.3em] uppercase font-black flex items-center">
+                            <span class="w-1.5 h-1.5 bg-pink-500 rounded-full mr-3"></span>
+                            Cool Guys Only
+                        </h4>
+                        <p class="text-sm text-gray-400 leading-relaxed font-light">
+                            We love local guys who know how to act. Be chill, be clear about what you're looking for, and bring that good energy. We're here to play just as much as you are.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-white/60 text-xs tracking-[0.3em] uppercase font-black flex items-center">
+                            <span class="w-1.5 h-1.5 bg-white/20 rounded-full mr-3"></span>
+                            Our Rules
+                        </h4>
+                        <p class="text-sm text-gray-400 leading-relaxed font-light">
+                            Respect is non-negotiable. Any weird vibes, disrespect, or gross talk gets you blocked immediately. Keep it fun and we'll show you the best time in Waterbury.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-white/5 bg-black/50 text-center">
+        <div class="flex justify-center space-x-8 md:space-x-16 mb-8">
+            <span class="text-[10px] tracking-[0.4em] text-gray-600 uppercase">Waterbury</span>
+            <span class="text-[10px] tracking-[0.4em] text-gray-600 uppercase">Safe</span>
+            <span class="text-[10px] tracking-[0.4em] text-gray-600 uppercase">Discreet</span>
+        </div>
+        <p class="text-[9px] tracking-[0.5em] text-gray-800 uppercase font-bold italic">© 2026 Kayla & Layla Duo. Real Heat.</p>
+    </footer>
+
+</body>
+</html>
+
