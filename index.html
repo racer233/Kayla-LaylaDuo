@@ -3,212 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kayla & Layla - Real Waterbury CT Duo. Double the fun for respectful guys. No drama, good vibes only.">
-    <meta property="og:title" content="Kayla & Layla | Real CT Duo">
-    <meta property="og:description" content="Double the heat in Waterbury. Real CT girls for cool guys who know how to play.">
-    <title>Kayla & Layla | Real Waterbury Duo</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700;1,900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    
+    <title>Kayla & Layla | Waterbury's Premier Duo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --neon-pink: #ff2d55;
-            --neon-red: #ff073a;
-            --dark-bg: #0a0a0a;
+            --gold: #d4af37;
+            --dark: #0a0a0a;
+            --light: #f4f4f4;
+            --grey: #1a1a1a;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: #eeeeee;
-            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark);
+            color: var(--light);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
         }
 
-        .font-serif-italic {
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            font-style: italic;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .platinum-text {
-            background: linear-gradient(135deg, #e5e4e2 0%, #ffffff 50%, #a6a6a6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 2px rgba(255,255,255,0.1));
+        /* Navigation */
+        nav {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gold);
         }
 
-        .text-glow {
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--gold); }
+
+        .btn-book {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 2px;
+            transition: 0.3s;
         }
 
-        .img-slot {
-            position: relative;
-            background: #111;
-            overflow: hidden;
-            aspect-ratio: 3/4;
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 4px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            padding: 0 20px;
         }
 
-        .img-slot:hover {
-            border-color: var(--neon-pink);
-            box-shadow: 0 0 25px rgba(255, 45, 85, 0.4);
+        .hero h1 { font-size: 3.5rem; margin-bottom: 0; }
+        .hero p { font-size: 1.2rem; font-style: italic; color: #ccc; }
+
+        /* Gallery/Profiles */
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
         }
 
-        .img-slot img {
+        .profile-card {
+            background: var(--grey);
+            border: 1px solid #333;
+            text-align: center;
+            padding-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .profile-card:hover { border-color: var(--gold); }
+
+        .profile-card img {
             width: 100%;
-            height: 100%;
+            height: 500px;
             object-fit: cover;
-            transition: transform 0.7s ease;
         }
 
-        .img-slot:hover img {
-            transform: scale(1.08);
+        /* Info Sections */
+        .info-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: var(--grey);
+            padding: 40px;
+            margin-top: 60px;
         }
 
-        .img-overlay {
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .rules { border-left: 2px solid var(--gold); padding-left: 30px; }
+
+        /* Contact Area */
+        .contact-box {
+            text-align: center;
+            padding: 80px 20px;
+            background: #111;
         }
 
-        .img-slot:hover .img-overlay {
-            opacity: 1;
+        .phone-link {
+            font-size: 2.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            display: block;
+            margin: 20px 0;
+            font-weight: bold;
         }
 
-        .cta-card {
-            background: linear-gradient(160deg, #141414 0%, #050505 100%);
-            border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .neon-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--neon-red);
-            border-radius: 50%;
+        .verified-btn {
             display: inline-block;
-            box-shadow: 0 0 8px var(--neon-red);
-            animation: pulse 2s infinite;
+            margin-top: 20px;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 10px 25px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.2); }
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #666;
         }
 
-        @media (max-width: 640px) {
-            .hero-title { font-size: 4rem; line-height: 1; }
-            .phone-link { font-size: 2.4rem; }
+        @media (max-width: 768px) {
+            .profile-grid, .info-section { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Nav -->
-    <nav class="w-full py-5 px-6 md:px-12 flex justify-between items-center border-b border-white/5 sticky top-0 z-50 bg-black/90 backdrop-blur-sm">
-        <div class="flex items-center space-x-3">
-            <span class="neon-dot"></span>
-            <span class="text-[10px] tracking-[0.5em] uppercase font-bold text-white/70">Waterbury, CT</span>
-        </div>
-        <div class="px-3 py-1 border border-pink-500/30 rounded bg-pink-500/5">
-            <span class="text-[9px] tracking-[0.3em] uppercase text-pink-500 font-extrabold">Real CT Duo</span>
-        </div>
+    <nav>
+        <div class="logo">K & L</div>
+        <a href="#contact" class="btn-book">TEXT NOW</a>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-4 md:px-8 pb-20">
-        
-        <!-- Hero Section -->
-        <section class="text-center pt-16 pb-12 md:pt-28 md:pb-24">
-            <h1 class="hero-title text-7xl md:text-9xl font-serif-italic platinum-text mb-8 text-glow">Kayla & Layla</h1>
-            <p class="text-lg md:text-2xl font-light tracking-wide text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                Real CT heat, double the fun. <br class="hidden md:block">
-                For <span class="text-white border-b border-pink-600/50">cool, respectful guys</span> who know how to play.
-            </p>
-        </section>
+    <header class="hero">
+        <h1>Kayla & Layla</h1>
+        <p>Waterbury’s Premier Luxury Duo</p>
+    </header>
 
-        <!-- Focused Gallery Grid (Kayla 1 and 2 Only) -->
-        <section class="grid grid-cols-2 gap-4 md:gap-8 mb-12 max-w-3xl mx-auto">
-            
-            <!-- Kayla Slot 1 -->
-            <div class="img-slot group">
-                <img src="https://i.postimg.cc/gXyYHcYN/Kayla_1.jpg" alt="Kayla Primary" loading="lazy">
-                <div class="img-overlay absolute inset-0 flex items-end p-4">
-                    <span class="text-[10px] tracking-widest uppercase font-bold text-white">Kayla</span>
-                </div>
+    <div class="container">
+        <h2 style="text-align: center;">The Experience</h2>
+        <p style="text-align: center; max-width: 700px; margin: auto;">Double the chemistry, double the fun. We provide a sophisticated, high-energy atmosphere for gentlemen who appreciate the finer things.</p>
+
+        <div class="profile-grid">
+            <div class="profile-card">
+                <img src="https://i.postimg.cc/gXyYHcYN/Kayla_1.jpg" alt="Kayla">
+                <h3>Kayla</h3>
+                <p>Spontaneous & Stunning</p>
             </div>
-
-            <!-- Kayla Slot 2 -->
-            <div class="img-slot group">
-                <img src="https://i.postimg.cc/CBCFsMFP/Kayla_2.jpg" alt="Kayla Alternate" loading="lazy">
-                <div class="img-overlay absolute inset-0 flex items-end p-4">
-                    <span class="text-[10px] tracking-widest uppercase font-bold text-white">Kayla</span>
-                </div>
+            <div class="profile-card">
+                <img src="https://i.postimg.cc/CBCFsMFP/Kayla_2.jpg" alt="Layla">
+                <h3>Layla</h3>
+                <p>Sweet & Sophisticated</p>
             </div>
-
-        </section>
-
-        <!-- Duo Chemistry Banner -->
-        <section class="w-full py-10 md:py-16 bg-gradient-to-r from-transparent via-white/5 to-transparent text-center border-y border-white/5 mb-12">
-            <h3 class="text-2xl md:text-4xl font-serif-italic text-white mb-2">The Ultimate Duo</h3>
-            <p class="text-xs tracking-[0.4em] text-pink-500 uppercase font-bold italic">Kayla & Layla Chemistry</p>
-        </section>
-
-        <!-- CTA Card -->
-        <section class="cta-card p-8 md:p-20 rounded-3xl text-center relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-3xl md:text-6xl font-serif-italic text-white mb-6">Ready for some real CT fun?</h2>
-                <p class="text-xs tracking-[0.4em] text-gray-500 uppercase mb-12 italic">Good vibes only, no drama.</p>
-                
-                <a href="tel:2035777211" class="phone-link text-5xl md:text-8xl font-serif-italic platinum-text text-glow inline-block hover:opacity-70 transition-all mb-16">
-                    203.577.7211
-                </a>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left border-t border-white/10 pt-14 max-w-4xl mx-auto">
-                    <div class="space-y-4">
-                        <h4 class="text-pink-500 text-xs tracking-[0.3em] uppercase font-black flex items-center">
-                            <span class="w-1.5 h-1.5 bg-pink-500 rounded-full mr-3"></span>
-                            Cool Guys Only
-                        </h4>
-                        <p class="text-sm text-gray-400 leading-relaxed font-light">
-                            We love local guys who know how to act. Be chill, be clear about what you're looking for, and bring that good energy. We're here to play just as much as you are.
-                        </p>
-                    </div>
-                    <div class="space-y-4">
-                        <h4 class="text-white/60 text-xs tracking-[0.3em] uppercase font-black flex items-center">
-                            <span class="w-1.5 h-1.5 bg-white/20 rounded-full mr-3"></span>
-                            Our Rules
-                        </h4>
-                        <p class="text-sm text-gray-400 leading-relaxed font-light">
-                            Respect is non-negotiable. Any weird vibes, disrespect, or gross talk gets you blocked immediately. Keep it fun and we'll show you the best time in Waterbury.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-16 border-t border-white/5 bg-black/50 text-center">
-        <div class="flex flex-col items-center space-y-6 px-4">
-            <div class="flex justify-center space-x-8 md:space-x-16 text-[10px] tracking-[0.4em] text-gray-600 uppercase">
-                <span>Waterbury</span>
-                <span>Safe</span>
-                <span>Discreet</span>
-            </div>
-            
-            <!-- External Directory Link -->
-            <div class="pt-4">
-                <a href="https://MyEscort.Network" target="_blank" class="text-[10px] tracking-[0.2em] text-pink-500/60 hover:text-pink-500 transition-colors uppercase font-semibold">
-                    MyEscort.Network - Free Escort Ads Directory
-                </a>
-            </div>
-
-            <p class="text-[9px] tracking-[0.5em] text-gray-800 uppercase font-bold italic pt-4">© 2026 Kayla & Layla Duo. Real Heat.</p>
         </div>
+
+        <div class="info-section">
+            <div>
+                <h3>The Vibe</h3>
+                <p>We love local Waterbury guys who know how to act. Be chill, be clear about your desires, and bring good energy. We are here to play just as much as you are.</p>
+                <p><strong>Location:</strong> Waterbury, CT (In-call & Out-call available)</p>
+            </div>
+            <div class="rules">
+                <h3>Executive Standards</h3>
+                <p>Respect is our only requirement. We maintain a strict "No Drama" policy. Disrespect or aggressive behavior results in an immediate block. Keep it classy, and we'll ensure you have the best time in the city.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-box" id="contact">
+        <h2>Ready for Real Heat?</h2>
+        <p>Discreet • Safe • Professional</p>
+        <a href="tel:2035777211" class="phone-link">203.577.7211</a>
+        <p>Text for fastest response. Serious inquiries only.</p>
+        
+        <a href="https://MyEscort.Network" target="_blank" class="verified-btn">View Verified Ad on MyEscort.Network</a>
+    </section>
+
+    <footer>
+        &copy; 2026 Kayla & Layla Duo. All Rights Reserved. <br>
+        Waterbury, Connecticut
     </footer>
 
 </body>
 </html>
-
